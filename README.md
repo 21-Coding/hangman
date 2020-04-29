@@ -1,3 +1,9 @@
+## Design | Layout 
+
+![image of design layout done with draw.io](https://lh3.googleusercontent.com/oAs4iapPbJA8u5TrkrZPqydWGfDycvih4FHnCEfMiJ2MUQ2gSgQobFAXnOmzaw2pymdh7Jh1qq8=s2000 "hangman")
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

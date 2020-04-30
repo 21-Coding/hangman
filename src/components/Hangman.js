@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import { randomTeam } from './Words.js'
 
+import step0 from "./images/zero.jpg";
+import step1 from "./images/one.jpg";
+import step2 from "./images/two.jpg";
+import step3 from "./images/three.jpg";
+import step4 from "./images/four.jpg";
+import step5 from "./images/five.jpg";
+import step6 from "./images/six.jpg";
+
 class Hangman extends Component {
   static defaultProps = {
     maxWrong: 6,
+    images: [step0, step1, step2, step3, step4, step5, step6]
   }
 
   constructor(props) {
@@ -66,6 +75,9 @@ class Hangman extends Component {
       <div className="Hangman container">
         {/* <h1 className='text-center'>Hangman</h1> */}
         <div className='float-right'>Wrong Guess: {this.state.mistake} of {this.props.maxIncorrect}</div>
+        <div className="text-center">
+          <img src={this.props.images[this.state.mistake]} alt="" />
+        </div>
         <div className="text-center">
           <p>Guess the NBA team!</p>
           <p>

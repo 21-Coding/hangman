@@ -3,7 +3,7 @@ import { randomTeam } from './Words.js'
 
 class Hangman extends Component {
   static defaultProps = {
-    maxIncorrect: 6,
+    maxWrong: 6,
   }
 
   constructor(props) {
@@ -57,7 +57,7 @@ class Hangman extends Component {
     return (
       <div className="Hangman container">
         <h1 className='text-center'>Hangman</h1>
-        <div className='float-right'>Wrong Guess: {this.state.mistake} of {this.props.maxWrong}</div>
+        <div className='float-right'>Wrong Guess: {this.state.mistake} of {this.props.maxIncorrect}</div>
         <div className="text-center">
           <p>Guess the NBA team!</p>
           <p>

@@ -42,6 +42,14 @@ class Hangman extends Component {
     ));
   }
 
+  resetButton = () => {
+    this.setState({
+      mistake: 0,
+      guessed: new Set([]),
+      answer: randomTeam()
+    });
+  }
+
   render() {
     const gameOver = this.state.mistake >= this.props.maxWrong;
     const isWinner = this.guessedWord().join("") === this.state.answer;
@@ -56,7 +64,7 @@ class Hangman extends Component {
 
     return (
       <div className="Hangman container">
-        <h1 className='text-center'>Hangman</h1>
+        {/* <h1 className='text-center'>Hangman</h1> */}
         <div className='float-right'>Wrong Guess: {this.state.mistake} of {this.props.maxIncorrect}</div>
         <div className="text-center">
           <p>Guess the NBA team!</p>
